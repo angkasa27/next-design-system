@@ -12,10 +12,10 @@ export default function Navbar() {
         className="flex flex-nowrap basis-full items-center container"
       >
         <Link
-          className="flex-none text-2xl font-extrabold tracking-tight dark:text-white"
+          className="flex-none text-2xl font-extrabold  dark:text-white"
           href="/"
         >
-          Letter Spacing
+          Simple Checklist
         </Link>
 
         <div className="flex items-center ml-auto sm:w-full sm:gap-x-3 sm:order-3 sm:ml-0">
