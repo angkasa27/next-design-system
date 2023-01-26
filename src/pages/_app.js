@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <ThemeProvider attribute="class">
-      <main className={`${CustomFont} font-sans`}>
+      <main className={`${CustomFont}  font-inter`}>
         <Component {...pageProps} />
       </main>
     </ThemeProvider>

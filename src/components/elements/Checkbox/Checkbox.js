@@ -12,7 +12,7 @@ export default function Checkbox(props) {
         className
       }
     >
-      <div className="flex items-center h-5">
+      <div className="flex items-center h-6">
         <input
           checked={checked}
           className="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
@@ -26,15 +26,15 @@ export default function Checkbox(props) {
       <label className="ml-2 w-full" htmlFor={name}>
         <span
           className={
-            (description ? " font-semibold" : "") +
-            " block text-sm text-gray-800 dark:text-gray-300 "
+            (description ? "subtitle-6" : "body-6") +
+            " block text-gray-800 dark:text-gray-300 "
           }
         >
           {label}
         </span>
         {!!description && (
           <span
-            className={"block text-sm text-gray-600 dark:text-gray-500 "}
+            className={"block body-6 text-gray-600 dark:text-gray-500 "}
             id="hs-checkbox-delete-description"
           >
             {description}

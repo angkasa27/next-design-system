@@ -2,11 +2,11 @@ import Button from "@components/elements/Button";
 import Navbar from "@components/fragments/Navbar";
 export default function Tess() {
   return (
-    <div className="dark:bg-slate-900 bg-white font-inter">
+    <div>
       <Navbar />
       <div className="container py-4">
         <Button component="button" variant="soft">
-          Ya
+          Subscribe
         </Button>
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,

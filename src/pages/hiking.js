@@ -34,9 +34,9 @@ export default function Tess() {
   const getOptionLabel = (option) => {
     return option.label;
   };
-  const getOptionDisabled = (option) => {
-    return option.disabled;
-  };
+  // const getOptionDisabled = (option) => {
+  //   return option.disabled;
+  // };
   const onChange = (option, val) => {
     const matchIndex = val.findIndex((v) => v === option.value);
     let newVal = [...val];
@@ -55,7 +55,7 @@ export default function Tess() {
   };
 
   return (
-    <div className="dark:bg-slate-900 bg-white font-inter text-grey-800 dark:text-white">
+    <div className="">
       <Navbar />
       <div className="container py-4">
         <CheckboxGroup {...checkboxProps} />

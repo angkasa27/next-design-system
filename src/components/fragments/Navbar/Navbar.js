@@ -11,11 +11,8 @@ export default function Navbar() {
         aria-label="Global"
         className="flex flex-nowrap basis-full items-center container"
       >
-        <Link
-          className="flex-none text-2xl font-extrabold  dark:text-white"
-          href="/"
-        >
-          Simple Checklist
+        <Link className="flex-none subtitle-3 dark:text-white" href="/">
+          Check it!
         </Link>
 
         <div className="flex items-center ml-auto sm:w-full sm:gap-x-3 sm:order-3 sm:ml-0">

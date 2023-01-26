@@ -18,7 +18,7 @@ export default function CheckboxGroup(props) {
     <ul className={"flex flex-col " + className}>
       {options.map((option, i) => (
         <li
-          className="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800/50 dark:border-gray-700 dark:text-white"
+          className="inline-flex items-center gap-x-2 py-3 px-4 bg-white border text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800/50 dark:border-gray-700 dark:text-white"
           key={i}
         >
           <Checkbox
