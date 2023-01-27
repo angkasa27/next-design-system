@@ -34,7 +34,7 @@ export default function Checkbox(props) {
         </span>
         {!!description && (
           <span
-            className={"block body-6 text-gray-600 dark:text-gray-500 "}
+            className={"block body-6 text-default-secondary"}
             id="hs-checkbox-delete-description"
           >
             {description}

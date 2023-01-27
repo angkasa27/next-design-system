@@ -46,4 +46,4 @@ export const BUTTON_CLASS = {
 };
 
 export const DEFAULT_BUTTON_CLASS =
-  " inline-flex justify-center items-center gap-2 subtitle-6 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ";
+  " inline-flex justify-center items-center gap-2 subtitle-6 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all tracking-wide ";
