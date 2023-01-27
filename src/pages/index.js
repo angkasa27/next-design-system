@@ -39,7 +39,7 @@ export function AlertSection() {
         id="alert1"
         title="Ini contoh alert dengan detail"
       >
-        <div className="text-default-secondary text-xs">
+        <div className="text-default-secondary body-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde officia
           ad dolores, voluptates odio fuga perferendis autem accusamus excepturi
           magni corporis quidem exercitationem ipsam sed delectus nam tempora

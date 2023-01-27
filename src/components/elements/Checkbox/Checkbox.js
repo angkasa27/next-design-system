@@ -26,7 +26,7 @@ export default function Checkbox(props) {
       <label className="ml-2 w-full" htmlFor={name}>
         <span
           className={
-            (description ? "subtitle-6" : "body-6") +
+            (description ? "subtitle-5" : "body-5") +
             " block text-gray-800 dark:text-gray-300 "
           }
         >
@@ -34,7 +34,7 @@ export default function Checkbox(props) {
         </span>
         {!!description && (
           <span
-            className={"block body-6 text-default-secondary"}
+            className={"block body-5 text-default-secondary"}
             id="hs-checkbox-delete-description"
           >
             {description}

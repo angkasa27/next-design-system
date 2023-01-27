@@ -21,7 +21,7 @@ export default function Alert(props) {
       <div className="flex items-start">
         {!!icon && <div className="flex-shrink-0 mr-2">{icon}</div>}
         <div>
-          <div className="subtitle-6 dark:text-white">{title}</div>
+          <div className="subtitle-5 dark:text-white">{title}</div>
           {children}
         </div>
         <div className={"pl-2 ml-auto flex"}>
