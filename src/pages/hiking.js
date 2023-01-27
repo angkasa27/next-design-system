@@ -1,6 +1,6 @@
-// import Button from "@components/elements/Button";
-import CheckboxGroup from "@components/elements/CheckboxGroup";
-import Navbar from "@components/fragments/Navbar";
+// import Button from "@elements/Button";
+import CheckboxGroup from "@elements/CheckboxGroup";
+import Navbar from "@fragments/Navbar";
 import { useState } from "react";
 
 export default function Tess() {

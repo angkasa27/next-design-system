@@ -1,30 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function List(props) {
+export default function Card(props) {
   const {
     component: Component,
     className,
     children,
     fluid,
-    ...listProps
+    transparent,
+    ...cardProps
   } = props;
 
   return (
     <Component
       className={
+        (transparent ? "" : "bg-white dark:bg-gray-800/50 ") +
         (fluid ? "" : "py-3 px-4 ") +
-        " inline-flex items-center gap-x-2 bg-white border -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800/50 border-default " +
+        " border -mt-px rounded-lg border-default " +
         className
       }
-      {...listProps}
+      {...cardProps}
     >
       {children}
     </Component>
   );
 }
 
-List.propTypes = {
+Card.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
@@ -33,10 +35,12 @@ List.propTypes = {
   className: PropTypes.string,
   component: PropTypes.string,
   fluid: PropTypes.bool,
+  transparent: PropTypes.bool,
 };
 
-List.defaultProps = {
+Card.defaultProps = {
   className: "",
-  component: "li",
+  component: "div",
   fluid: false,
+  transparent: false,
 };

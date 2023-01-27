@@ -19,7 +19,7 @@ export default function Checkbox(props) {
           disabled={disabled}
           id={name}
           name={name}
-          onClick={onChange}
+          onChange={onChange}
           type="checkbox"
         />
       </div>
