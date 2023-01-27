@@ -26,8 +26,7 @@ export default function Acordion(props) {
               " hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex items-center gap-x-3 w-full font-semibold transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500 dark:hover:text-gray-400 justify-between focus:ring-0"
             }
             color={color}
-            rounded="none"
-            size="fluid"
+            fluid="none"
             variant="text"
           >
             {item.title}

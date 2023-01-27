@@ -29,8 +29,8 @@ export default function Alert(props) {
             <Button
               className="px-1"
               color={color}
+              fluid={true}
               key={i}
-              size="fluid"
               variant="text"
               {...props}
             >
@@ -42,7 +42,7 @@ export default function Alert(props) {
               className="p-0.5"
               color={color}
               data-hs-remove-element={`#${id}`}
-              size="fluid"
+              fluid={true}
               variant="text"
             >
               <span className="sr-only">Dismiss</span>
