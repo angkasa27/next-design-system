@@ -22,6 +22,8 @@ export default function Button(props) {
         return " py-2 px-3 ";
       case "large":
         return " py-3 px-4 sm:p-5 ";
+      case "fluid":
+        return "";
       default:
         return " py-3 px-4 ";
     }
@@ -86,7 +88,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
   pill: PropTypes.bool,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(["fluid", "small", "medium", "large"]),
   variant: PropTypes.oneOf(["solid", "outline", "text", "soft"]),
 };
 
