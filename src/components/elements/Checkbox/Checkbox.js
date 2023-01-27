@@ -12,7 +12,7 @@ export default function Checkbox(props) {
         className
       }
     >
-      <div className="flex items-center h-6">
+      <div className="flex items-center h-5">
         <input
           checked={checked}
           className="border-gray-200 rounded dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
