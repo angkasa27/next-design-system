@@ -10,7 +10,7 @@ export default function Button(props) {
     children,
     variant,
     color,
-    pill,
+    rounded,
     loading,
     disabled,
     ...buttonProps
@@ -22,8 +22,6 @@ export default function Button(props) {
         return " py-2 px-3 ";
       case "large":
         return " py-3 px-4 sm:p-5 ";
-      case "fluid":
-        return "";
       default:
         return " py-3 px-4 ";
     }
@@ -42,7 +40,16 @@ export default function Button(props) {
     }
   };
 
-  const borderRadius = pill ? " rounded-full " : " rounded-md ";
+  const borderRadius = () => {
+    switch (rounded) {
+      case "full":
+        return " rounded-full ";
+      case "none":
+        return "";
+      default:
+        return " rounded-md ";
+    }
+  };
 
   return (
     <Component
@@ -50,7 +57,7 @@ export default function Button(props) {
         sizeClass() +
         variantClass() +
         DEFAULT_BUTTON_CLASS +
-        borderRadius +
+        borderRadius() +
         className
       }
       disabled={disabled || loading}
@@ -86,9 +93,10 @@ Button.propTypes = {
     PropTypes.element,
   ]),
   disabled: PropTypes.bool,
+  fluid: PropTypes.bool,
   loading: PropTypes.bool,
-  pill: PropTypes.bool,
-  size: PropTypes.oneOf(["fluid", "small", "medium", "large"]),
+  rounded: PropTypes.oneOf(["full", "md", "none"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["solid", "outline", "text", "soft"]),
 };
 
@@ -96,8 +104,9 @@ Button.defaultProps = {
   color: "blue",
   component: "button",
   disabled: false,
+  fluid: false,
   loading: false,
-  pill: false,
+  rounded: "md",
   size: "medium",
   variant: "solid",
 };
