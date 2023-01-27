@@ -5,17 +5,52 @@ import { useState } from "react";
 import Button from "@elements/Button";
 import Card from "@elements/Card";
 import Alert from "@elements/Alert";
+import Acordion from "@elements/Acordion";
 
 export default function Tess() {
   return (
     <div className="">
       <Navbar />
       <div className="container flex gap-2 flex-col mt-2">
+        <AcordionSection />
         <AlertSection />
         <ButtonSection />
         <CheckboxSection />
       </div>
     </div>
+  );
+}
+
+export function AcordionSection() {
+  const items = [
+    {
+      detail: (
+        <p>
+          This is the items accordion body. It is hidden by default, until the
+          collapse plugin adds the appropriate classes that we use to style each
+          element. These classes control the overall appearance, as well as the
+          showing and hiding via CSS transitions.
+        </p>
+      ),
+      title: "Acordion #1",
+    },
+    {
+      detail: (
+        <p>
+          This is the items accordion body. It is hidden by default, until the
+          collapse plugin adds the appropriate classes that we use to style each
+          element. These classes control the overall appearance, as well as the
+          showing and hiding via CSS transitions.
+        </p>
+      ),
+      title: "Acordion #2",
+    },
+  ];
+  return (
+    <Card className="flex flex-wrap gap-2">
+      <Acordion id="Acordion-one" items={items} />
+      <Acordion activealwaysOpen bordered id="Acordion-one" items={items} />
+    </Card>
   );
 }
 
@@ -97,7 +132,7 @@ export function AlertSection() {
 export function ButtonSection() {
   const buttonVariant = ["solid", "soft", "outline", "text"];
   const buttonColor = ["blue", "gray", "green", "red", "purple", "yellow"];
-  const buttonSize = ["fluid", "small", "medium", "large"];
+  const buttonSize = ["small", "medium", "large"];
   const defaultStyle = "capitalize";
 
   return (
@@ -142,6 +177,23 @@ export function ButtonSection() {
             </Button>
           </div>
         ))}
+      </Card>
+      <Card className="flex flex-wrap gap-2 items-center">
+        <div>
+          <Button className={defaultStyle} fluid>
+            Fluid
+          </Button>
+        </div>
+        <div>
+          <Button className={defaultStyle} rounded="full">
+            Pill
+          </Button>
+        </div>
+        <div>
+          <Button className={defaultStyle} rounded="none">
+            Flat
+          </Button>
+        </div>
       </Card>
     </>
   );

@@ -57,3 +57,7 @@ body {
 .border-default {
   @apply border-slate-900/10 dark:border-slate-300/10;
 }
+
+.border-group-default {
+  @apply border -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg border-default;
+}

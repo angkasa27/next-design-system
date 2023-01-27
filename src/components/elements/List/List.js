@@ -14,7 +14,7 @@ export default function List(props) {
     <Component
       className={
         (fluid ? "" : "py-3 px-4 ") +
-        " inline-flex items-center gap-x-2 bg-white border -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-gray-800/50 border-default " +
+        " inline-flex items-center gap-x-2 bg-white dark:bg-gray-800/50 border-group-default " +
         className
       }
       {...listProps}
