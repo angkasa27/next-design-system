@@ -20,6 +20,7 @@ export default function Tess() {
 }
 
 export function AlertSection() {
+  const alertColor = ["blue", "gray", "green", "red", "purple", "yellow"];
   return (
     <div className="flex flex-col gap-2">
       <Alert
@@ -65,7 +66,6 @@ export function AlertSection() {
         title="Ini contoh alert dengan action detail"
       />
       <Alert
-        color="red"
         dismissible
         icon={
           <svg
@@ -80,8 +80,16 @@ export function AlertSection() {
           </svg>
         }
         id="alert3"
-        title="Ini contoh text alert"
+        title="Ini contoh alert close"
       />
+      {alertColor.map((color, i) => (
+        <Alert
+          color={color}
+          id={`alert-${color}`}
+          key={i}
+          title={`Ini contoh alert ${color}`}
+        />
+      ))}
     </div>
   );
 }
