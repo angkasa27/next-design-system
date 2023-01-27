@@ -87,7 +87,7 @@ Button.propTypes = {
     PropTypes.node,
   ]).isRequired,
   className: PropTypes.string,
-  color: PropTypes.oneOf(["blue", "red", "green", "yellow"]),
+  color: PropTypes.oneOf(["blue", "gray", "green", "red", "purple", "yellow"]),
   component: PropTypes.oneOfType([
     PropTypes.oneOf(["button", "Link", "a"]),
     PropTypes.element,

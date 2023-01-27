@@ -76,7 +76,7 @@ Alert.propTypes = {
     PropTypes.node,
   ]),
   className: PropTypes.string,
-  color: PropTypes.oneOf(["blue", "red", "green", "yellow"]),
+  color: PropTypes.oneOf(["blue", "gray", "green", "red", "purple", "yellow"]),
   dismissible: PropTypes.bool,
   icon: PropTypes.element,
   id: PropTypes.string.isRequired,
