@@ -9,22 +9,22 @@ body {
 
 /* **-----Typography-----** */
 .subtitle-1 {
-  @apply text-7xl font-black tracking-tighter;
+  @apply text-7xl font-[800] tracking-tighter;
 }
 .subtitle-2 {
-  @apply text-4xl font-black tracking-tight;
+  @apply text-4xl font-[800] tracking-tight;
 }
 .subtitle-3 {
-  @apply text-2xl font-black tracking-tight;
+  @apply text-2xl font-[800] tracking-tight;
 }
 .subtitle-4 {
-  @apply text-lg font-bold;
+  @apply text-lg font-[600];
 }
 .subtitle-5 {
-  @apply text-base font-bold;
+  @apply text-base font-[600];
 }
 .subtitle-6 {
-  @apply text-sm font-bold;
+  @apply text-sm font-[600];
 }
 
 .body-1 {
