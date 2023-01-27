@@ -59,7 +59,7 @@ export default function Button(props) {
           <span className="sr-only">Loading...</span>
           <span
             aria-label="loading"
-            className="animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-white rounded-full"
+            className="animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent rounded-full"
             role="status"
           >
             <span className="sr-only">Loading...</span>
