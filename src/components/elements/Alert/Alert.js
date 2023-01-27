@@ -19,12 +19,12 @@ export default function Alert(props) {
       role="alert"
     >
       <div className="flex items-start">
-        {!!icon && <div className="flex-shrink-0 mr-3">{icon}</div>}
+        {!!icon && <div className="flex-shrink-0 mr-2">{icon}</div>}
         <div>
           <div className="subtitle-6 dark:text-white">{title}</div>
           {children}
         </div>
-        <div className={"pl-3 ml-auto flex"}>
+        <div className={"pl-2 ml-auto flex"}>
           {action.map(({ name, props }, i) => (
             <Button
               className="px-1"
