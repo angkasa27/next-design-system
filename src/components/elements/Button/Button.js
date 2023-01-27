@@ -13,6 +13,7 @@ export default function Button(props) {
     rounded,
     loading,
     disabled,
+    fluid,
     ...buttonProps
   } = props;
 
@@ -23,6 +24,7 @@ export default function Button(props) {
       case "large":
         return " py-3 px-4 sm:p-5 ";
       default:
+        if (fluid) return "";
         return " py-3 px-4 ";
     }
   };
