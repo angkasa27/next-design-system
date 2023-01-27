@@ -45,3 +45,8 @@ body {
 .body-6 {
   @apply text-sm;
 }
+
+/* **-----Border-----** */
+.border-default {
+  @apply border-slate-900/10 dark:border-slate-300/10;
+}

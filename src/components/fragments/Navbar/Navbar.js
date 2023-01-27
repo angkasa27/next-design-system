@@ -6,7 +6,7 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b text-sm py-2.5 sm:py-4 dark:bg-slate-900 border-slate-900/10 dark:border-slate-300/10">
+    <header className="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b text-sm py-2.5 sm:py-4 dark:bg-slate-900 border-default">
       <nav
         aria-label="Global"
         className="flex flex-nowrap basis-full items-center container"
