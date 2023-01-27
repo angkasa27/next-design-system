@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Button from "@elements/Button";
 
 export default function Acordion(props) {
-  const { className, items, id, bordered, alwaysOpen } = props;
+  const { className, items, id, bordered, alwaysOpen, color } = props;
   return (
     <div
       className={"hs-accordion-group w-full " + className}
@@ -25,6 +25,7 @@ export default function Acordion(props) {
               (bordered ? "py-4 px-5 " : "") +
               " hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex items-center gap-x-3 w-full font-semibold transition hover:text-gray-500 dark:hs-accordion-active:text-blue-500 dark:hover:text-gray-400 justify-between focus:ring-0"
             }
+            color={color}
             rounded="none"
             size="fluid"
             variant="text"
@@ -78,6 +79,7 @@ Acordion.propTypes = {
   alwaysOpen: PropTypes.bool,
   bordered: PropTypes.bool,
   className: PropTypes.string,
+  color: PropTypes.oneOf(["blue", "gray", "green", "red", "purple", "yellow"]),
   id: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
 };
@@ -85,5 +87,6 @@ Acordion.propTypes = {
 Acordion.defaultProps = {
   alwaysOpen: false,
   bordered: false,
+  color: "blue",
   items: [],
 };
