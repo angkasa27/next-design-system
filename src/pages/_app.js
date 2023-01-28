@@ -24,6 +24,6 @@ export default function App({ Component, pageProps }) {
 }
 
 App.propTypes = {
-  Component: PropTypes.ReactElement,
+  Component: PropTypes.func,
   pageProps: PropTypes.any,
 };
