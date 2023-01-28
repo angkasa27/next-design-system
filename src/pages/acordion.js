@@ -52,7 +52,7 @@ export default function acordion() {
           id="hs-basic-collapse-one"
         >
           <p className="text-gray-800 dark:text-gray-200">
-            <em>This is the third item's accordion body.</em> It is hidden by
+            <em>This is the third items accordion body.</em> It is hidden by
             default, until the collapse plugin adds the appropriate classes that
             we use to style each element. These classes control the overall
             appearance, as well as the showing and hiding via CSS transitions.
@@ -109,7 +109,7 @@ export default function acordion() {
           id="hs-basic-collapse-two"
         >
           <p className="text-gray-800 dark:text-gray-200">
-            <em>This is the third item's accordion body.</em> It is hidden by
+            <em>This is the third items accordion body.</em> It is hidden by
             default, until the collapse plugin adds the appropriate classes that
             we use to style each element. These classes control the overall
             appearance, as well as the showing and hiding via CSS transitions.
@@ -166,7 +166,7 @@ export default function acordion() {
           id="hs-basic-collapse-three"
         >
           <p className="text-gray-800 dark:text-gray-200">
-            <em>This is the third item's accordion body.</em> It is hidden by
+            <em>This is the third items accordion body.</em> It is hidden by
             default, until the collapse plugin adds the appropriate classes that
             we use to style each element. These classes control the overall
             appearance, as well as the showing and hiding via CSS transitions.
