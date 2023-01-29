@@ -34,7 +34,7 @@ body {
   @apply text-sm font-medium;
 }
 .subtitle-7 {
-  @apply text-sm font-medium;
+  @apply text-xs font-medium;
 }
 
 .body-1 {

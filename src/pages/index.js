@@ -7,6 +7,7 @@ import Alert from "@elements/Alert";
 import Acordion from "@elements/Acordion";
 import Badge from "@elements/Badge";
 import List from "@elements/List";
+import Chip from "@elements/Chip";
 
 const colors = ["blue", "gray", "green", "red", "purple", "yellow"];
 
@@ -15,6 +16,7 @@ export default function App() {
     <div className="">
       <Navbar />
       <div className="container flex gap-2 flex-col mt-2">
+        <ChipSection />
         <AcordionSection />
         <AlertSection />
         <BadgeSection />
@@ -349,4 +351,16 @@ export function CheckboxSection() {
     value,
   };
   return <CheckboxGroup {...checkboxProps} />;
+}
+
+export function ChipSection() {
+  return (
+    <ul>
+      <List className="flex flex-wrap gap-2 items-center w-full">
+        <Chip color="red" onClose={() => {}}>
+          Tets
+        </Chip>
+      </List>
+    </ul>
+  );
 }
