@@ -3,10 +3,10 @@ import CheckboxGroup from "@elements/CheckboxGroup";
 import Navbar from "@fragments/Navbar";
 import { useState } from "react";
 import Button from "@elements/Button";
-import Card from "@elements/Card";
 import Alert from "@elements/Alert";
 import Acordion from "@elements/Acordion";
 import Badge from "@elements/Badge";
+import List from "@elements/List";
 
 const colors = ["blue", "gray", "green", "red", "purple", "yellow"];
 
@@ -51,91 +51,107 @@ export function AcordionSection() {
     },
   ];
   return (
-    <Card className="flex flex-wrap gap-2">
-      <Acordion id="Acordion-one" items={items} />
-      <Acordion activealwaysOpen bordered id="Acordion-one" items={items} />
-    </Card>
+    <ul>
+      <List className="w-full">
+        <Acordion id="Acordion-one" items={items} />
+      </List>
+      <List className="w-full">
+        <Acordion activealwaysOpen bordered id="Acordion-one" items={items} />
+      </List>
+    </ul>
   );
 }
 
 export function AlertSection() {
   return (
-    <div className="flex flex-col gap-2">
-      <Alert
-        icon={
-          <svg
-            className="h-4 w-4 mt-0.5"
-            fill="currentColor"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-          </svg>
-        }
-        id="alert1"
-        title="Ini contoh alert dengan detail"
-      >
-        <div className="text-default-secondary body-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde officia
-          ad dolores, voluptates odio fuga perferendis autem accusamus excepturi
-          magni corporis quidem exercitationem ipsam sed delectus nam tempora
-          eaque? Ut?
-        </div>
-      </Alert>
-      <Alert
-        action={[
-          { name: "Detail", props: { onClick: () => console.log("detail") } },
-        ]}
-        icon={
-          <svg
-            className="h-4 w-4 mt-0.5"
-            fill="currentColor"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-          </svg>
-        }
-        id="alert2"
-        title="Ini contoh alert dengan action detail"
-      />
-      <Alert
-        dismissible
-        icon={
-          <svg
-            className="h-4 w-4 mt-0.5"
-            fill="currentColor"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-          </svg>
-        }
-        id="alert3"
-        title="Ini contoh alert close"
-      />
-      {colors.map((color, i) => (
+    <ul>
+      <List className="w-full">
         <Alert
-          color={color}
-          id={`alert-${color}`}
-          key={i}
-          title={`Ini contoh alert ${color}`}
+          className="w-full"
+          icon={
+            <svg
+              className="h-4 w-4 mt-0.5 "
+              fill="currentColor"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </svg>
+          }
+          id="alert1"
+          title="Ini contoh alert dengan detail"
+        >
+          <div className="text-default-secondary body-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+            officia ad dolores, voluptates odio fuga perferendis autem accusamus
+            excepturi magni corporis quidem exercitationem ipsam sed delectus
+            nam tempora eaque? Ut?
+          </div>
+        </Alert>
+      </List>
+      <List className="w-full">
+        <Alert
+          action={[
+            { name: "Detail", props: { onClick: () => console.log("detail") } },
+          ]}
+          className="w-full"
+          icon={
+            <svg
+              className="h-4 w-4 mt-0.5"
+              fill="currentColor"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </svg>
+          }
+          id="alert2"
+          title="Ini contoh alert dengan action detail"
         />
-      ))}
-    </div>
+      </List>
+      <List className="w-full">
+        <Alert
+          className="w-full"
+          dismissible
+          icon={
+            <svg
+              className="h-4 w-4 mt-0.5"
+              fill="currentColor"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </svg>
+          }
+          id="alert3"
+          title="Ini contoh alert close"
+        />
+      </List>
+      <List className="flex flex-col gap-2 w-full">
+        {colors.map((color, i) => (
+          <Alert
+            className="w-full"
+            color={color}
+            id={`alert-${color}`}
+            key={i}
+            title={`Ini contoh alert ${color}`}
+          />
+        ))}
+      </List>
+    </ul>
   );
 }
 
 export function BadgeSection() {
   return (
-    <>
-      <Card className="flex flex-wrap gap-2">
+    <ul>
+      <List className="flex flex-wrap gap-2 w-full">
         <Button className="relative">
           <svg
             fill="currentColor"
@@ -186,8 +202,8 @@ export function BadgeSection() {
             99+
           </Badge>
         </Button>
-      </Card>
-      <Card className="flex flex-wrap gap-2">
+      </List>
+      <List className="flex flex-wrap gap-2 w-full">
         {colors.map((color, i) => (
           <Button className="relative" key={i} variant="soft">
             <svg
@@ -202,8 +218,8 @@ export function BadgeSection() {
             <Badge color={color}></Badge>
           </Button>
         ))}
-      </Card>
-    </>
+      </List>
+    </ul>
   );
 }
 
@@ -213,8 +229,8 @@ export function ButtonSection() {
   const defaultStyle = "capitalize";
 
   return (
-    <>
-      <Card className="flex flex-wrap gap-2 items-center">
+    <ul>
+      <List className="flex flex-wrap gap-2 items-center w-full">
         {buttonSize.map((size, i) => (
           <div key={i}>
             <Button className={defaultStyle} size={size}>
@@ -222,8 +238,8 @@ export function ButtonSection() {
             </Button>
           </div>
         ))}
-      </Card>
-      <Card className="flex flex-wrap gap-2 items-center">
+      </List>
+      <List className="flex flex-wrap gap-2 items-center w-full">
         {buttonVariant.map((variant, i) => (
           <div key={i}>
             <Button className={defaultStyle} disabled variant={variant}>
@@ -231,8 +247,8 @@ export function ButtonSection() {
             </Button>
           </div>
         ))}
-      </Card>
-      <Card className="flex flex-wrap gap-2 items-center">
+      </List>
+      <List className="flex flex-wrap gap-2 items-center w-full">
         {buttonVariant.map((variant, i) => (
           <div key={i}>
             <Button className={defaultStyle} loading variant={variant}>
@@ -240,8 +256,8 @@ export function ButtonSection() {
             </Button>
           </div>
         ))}
-      </Card>
-      <Card className="flex flex-wrap gap-2 items-center">
+      </List>
+      <List className="flex flex-wrap gap-2 items-center w-full">
         <div>
           <Button className={defaultStyle} fluid>
             Fluid
@@ -257,9 +273,9 @@ export function ButtonSection() {
             Flat
           </Button>
         </div>
-      </Card>
+      </List>
       {buttonVariant.map((variant, i) => (
-        <Card className="flex flex-wrap gap-2" key={i}>
+        <List className="flex flex-wrap gap-2 w-full" key={i}>
           {colors.map((color, i) => (
             <Button
               className={defaultStyle}
@@ -270,9 +286,9 @@ export function ButtonSection() {
               {variant}
             </Button>
           ))}
-        </Card>
+        </List>
       ))}
-    </>
+    </ul>
   );
 }
 
