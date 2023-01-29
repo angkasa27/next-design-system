@@ -9,19 +9,19 @@ import Badge from "@elements/Badge";
 import List from "@elements/List";
 import Chip from "@elements/Chip";
 
-const colors = ["blue", "gray", "green", "red", "purple", "yellow"];
+const COLORS = ["blue", "gray", "green", "red", "purple", "yellow"];
 
 export default function App() {
   return (
     <div className="">
       <Navbar />
       <div className="container flex gap-2 flex-col mt-2">
-        <ChipSection />
         <AcordionSection />
         <AlertSection />
         <BadgeSection />
         <ButtonSection />
         <CheckboxSection />
+        <ChipSection />
       </div>
     </div>
   );
@@ -136,7 +136,7 @@ export function AlertSection() {
         />
       </List>
       <List className="flex flex-col gap-2 w-full">
-        {colors.map((color, i) => (
+        {COLORS.map((color, i) => (
           <Alert
             className="w-full"
             color={color}
@@ -206,7 +206,7 @@ export function BadgeSection() {
         </Button>
       </List>
       <List className="flex flex-wrap gap-2 w-full">
-        {colors.map((color, i) => (
+        {COLORS.map((color, i) => (
           <Button className="relative" key={i} variant="soft">
             <svg
               fill="currentColor"
@@ -278,7 +278,7 @@ export function ButtonSection() {
       </List>
       {buttonVariant.map((variant, i) => (
         <List className="flex flex-wrap gap-2 w-full" key={i}>
-          {colors.map((color, i) => (
+          {COLORS.map((color, i) => (
             <Button
               className={defaultStyle}
               color={color}
@@ -357,9 +357,18 @@ export function ChipSection() {
   return (
     <ul>
       <List className="flex flex-wrap gap-2 items-center w-full">
-        <Chip color="red" onClose={() => {}}>
-          Tets
-        </Chip>
+        {COLORS.map((color, i) => (
+          <Chip color={color} key={i}>
+            {color}
+          </Chip>
+        ))}
+      </List>
+      <List className="flex flex-wrap gap-2 items-center w-full">
+        {COLORS.map((color, i) => (
+          <Chip color={color} key={i} onClose={() => {}}>
+            {color}
+          </Chip>
+        ))}
       </List>
     </ul>
   );
