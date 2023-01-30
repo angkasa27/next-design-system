@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Button from "@elements/Button";
+import Icon from "@assets/Icon/Icon";
 
 export default function Acordion(props) {
   const { className, items, id, bordered, alwaysOpen, color } = props;
@@ -31,36 +32,15 @@ export default function Acordion(props) {
             variant="text"
           >
             {item.title}
-            <svg
-              className="hs-accordion-active:hidden  block w-3 h-3"
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeWidth="2"
-              />
-            </svg>
-            <svg
-              className="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-3 h-3 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 11L8.16086 5.31305C8.35239 5.13625 8.64761 5.13625 8.83914 5.31305L15 11"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeWidth="2"
-              />
-            </svg>
+
+            <Icon
+              className="hs-accordion-active:hidden block w-4 h-4"
+              name="ChevronDown"
+            />
+            <Icon
+              className="hs-accordion-active:block hs-accordion-active:text-blue-600 hs-accordion-active:group-hover:text-blue-600 hidden w-4 h-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+              name="ChevronUp"
+            />
           </Button>
           <div
             aria-labelledby={`${id}-heading-${i + 1}`}
