@@ -2,22 +2,34 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function FormControl(props) {
-  const { label, optional, id, error, hint, children } = props;
+  const { label, optional, id, error, hint, children, className } = props;
 
   const renderHelper = () => {
+    console.log(hint);
     const helperText = error || hint;
-    <div className="min-h-4">
-      <p className="body-6 .text-default-secondary mt-2">{helperText}</p>
-    </div>;
+    return (
+      <div className="min-h-[20px] mt-2">
+        <p
+          className={
+            (error ? "text-red-500" : "text-default-secondary") + " body-6"
+          }
+        >
+          {helperText}
+        </p>
+      </div>
+    );
   };
 
   return (
-    <div>
+    <div className={className}>
       {label && (
-        <label className="block subtitle-5 mb-2 dark:text-white" htmlFor={id}>
+        <label
+          className="block body-5 font-medium mb-2 dark:text-white"
+          htmlFor={id}
+        >
           {label}
           {optional && (
-            <span className="ml-2 .text-default-secondary">
+            <span className="ml-2 text-default-secondary">
               {typeof optional === "string" ? optional : `(Opsional)`}
             </span>
           )}
