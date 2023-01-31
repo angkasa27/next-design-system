@@ -37,11 +37,8 @@ export default function Navbar() {
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
-              {theme === "dark" ? (
-                <Icon name="Moon" size={26} />
-              ) : (
-                <Icon name="Sun" size={26} />
-              )}
+              <Icon className="dark:block hidden" name="Moon" size={26} />
+              <Icon className="dark:hidden " name="Sun" size={26} />
             </button>
           </div>
         </div>
