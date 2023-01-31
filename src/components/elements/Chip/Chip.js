@@ -9,7 +9,7 @@ export default function Chip({ children, onClose, className, color }) {
     <span
       className={
         (onClose ? " pl-3 pr-2 " : " px-3 ") +
-        " inline-flex items-center gap-1 py-1.5 rounded-full subtitle-7 " +
+        " inline-flex items-center gap-1 py-1.5 rounded-full subtitle-6 " +
         CHIP_CLASS[color] +
         className
       }
