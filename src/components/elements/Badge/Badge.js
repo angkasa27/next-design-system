@@ -44,7 +44,7 @@ Badge.propTypes = {
     PropTypes.string,
     PropTypes.element,
     PropTypes.node,
-  ]).isRequired,
+  ]),
   className: PropTypes.string,
   color: PropTypes.oneOf(["blue", "gray", "green", "red", "purple", "yellow"]),
   ping: PropTypes.bool,
