@@ -10,9 +10,9 @@ export default function Alert(props) {
     <div
       className={
         (dismissible
-          ? "hs-removing:translate-x-5 hs-removing:opacity-0 "
+          ? "hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 "
           : "") +
-        "transition duration-300 rounded-md p-4 border " +
+        " rounded-md p-4 border " +
         ALERT_CLASS[color] +
         className
       }
