@@ -9,6 +9,7 @@ import Badge from "@elements/Badge";
 import List from "@elements/List";
 import Chip from "@elements/Chip";
 import Icon from "@assets/Icon/Icon";
+import Input from "@form/Input";
 
 const COLORS = ["blue", "gray", "green", "red", "purple", "yellow"];
 
@@ -17,6 +18,16 @@ export default function App() {
     <div className="">
       <Navbar />
       <div className="container flex gap-2 flex-col mt-2">
+        <List className="w-full" component="div">
+          <Input
+            className="w-full"
+            // hint={"this is hint example"}
+            id="inputForm"
+            label="Email"
+            placeholder="test"
+            type="email"
+          />
+        </List>
         <AcordionSection />
         <AlertSection />
         <BadgeSection />
@@ -69,8 +80,8 @@ export function AlertSection() {
   const InfoIcon = <Icon name="Info" size={20} />;
 
   return (
-    <ul>
-      <List className="w-full">
+    <div>
+      <List className="w-full" component="div">
         <Alert
           className="w-full"
           icon={InfoIcon}
@@ -85,7 +96,7 @@ export function AlertSection() {
           </div>
         </Alert>
       </List>
-      <List className="w-full">
+      <List className="w-full" component="div">
         <Alert
           action={[
             { name: "Detail", props: { onClick: () => console.log("detail") } },
@@ -96,7 +107,7 @@ export function AlertSection() {
           title="Ini contoh alert dengan action detail"
         />
       </List>
-      <List className="w-full">
+      <List className="w-full" component="div">
         <Alert
           className="w-full"
           dismissible
@@ -105,7 +116,7 @@ export function AlertSection() {
           title="Ini contoh alert close"
         />
       </List>
-      <List className="flex flex-col gap-2 w-full">
+      <List className="flex flex-col gap-2 w-full" component="div">
         {COLORS.map((color, i) => (
           <Alert
             className="w-full"
@@ -116,7 +127,7 @@ export function AlertSection() {
           />
         ))}
       </List>
-    </ul>
+    </div>
   );
 }
 
@@ -124,8 +135,8 @@ export function BadgeSection() {
   const BellIcon = <Icon name="Bell" />;
 
   return (
-    <ul>
-      <List className="flex flex-wrap gap-2 w-full">
+    <div>
+      <List className="flex flex-wrap gap-2 w-full" component="div">
         <Button className="relative">
           {BellIcon}
           <Badge color="red" />
@@ -145,7 +156,7 @@ export function BadgeSection() {
           </Badge>
         </Button>
       </List>
-      <List className="flex flex-wrap gap-2 w-full">
+      <List className="flex flex-wrap gap-2 w-full" component="div">
         {COLORS.map((color, i) => (
           <Button className="relative" key={i} variant="soft">
             {BellIcon}
@@ -153,7 +164,7 @@ export function BadgeSection() {
           </Button>
         ))}
       </List>
-      <List className="flex flex-wrap gap-2 w-full">
+      <List className="flex flex-wrap gap-2 w-full" component="div">
         {COLORS.map((color, i) => (
           <Button className="relative" key={i} variant="soft">
             {BellIcon}
@@ -161,7 +172,7 @@ export function BadgeSection() {
           </Button>
         ))}
       </List>
-    </ul>
+    </div>
   );
 }
 
@@ -171,8 +182,11 @@ export function ButtonSection() {
   const defaultStyle = "capitalize";
 
   return (
-    <ul>
-      <List className="flex flex-wrap gap-2 items-center w-full">
+    <div>
+      <List
+        className="flex flex-wrap gap-2 items-center w-full"
+        component="div"
+      >
         {buttonSize.map((size, i) => (
           <div key={i}>
             <Button className={defaultStyle} size={size}>
@@ -181,7 +195,10 @@ export function ButtonSection() {
           </div>
         ))}
       </List>
-      <List className="flex flex-wrap gap-2 items-center w-full">
+      <List
+        className="flex flex-wrap gap-2 items-center w-full"
+        component="div"
+      >
         {buttonVariant.map((variant, i) => (
           <div key={i}>
             <Button className={defaultStyle} disabled variant={variant}>
@@ -190,7 +207,10 @@ export function ButtonSection() {
           </div>
         ))}
       </List>
-      <List className="flex flex-wrap gap-2 items-center w-full">
+      <List
+        className="flex flex-wrap gap-2 items-center w-full"
+        component="div"
+      >
         {buttonVariant.map((variant, i) => (
           <div key={i}>
             <Button className={defaultStyle} loading variant={variant}>
@@ -199,7 +219,10 @@ export function ButtonSection() {
           </div>
         ))}
       </List>
-      <List className="flex flex-wrap gap-2 items-center w-full">
+      <List
+        className="flex flex-wrap gap-2 items-center w-full"
+        component="div"
+      >
         <div>
           <Button className={defaultStyle} fluid>
             Fluid
@@ -230,7 +253,7 @@ export function ButtonSection() {
           ))}
         </List>
       ))}
-    </ul>
+    </div>
   );
 }
 
@@ -295,21 +318,27 @@ export function CheckboxSection() {
 
 export function ChipSection() {
   return (
-    <ul>
-      <List className="flex flex-wrap gap-2 items-center w-full">
+    <div>
+      <List
+        className="flex flex-wrap gap-2 items-center w-full"
+        component="div"
+      >
         {COLORS.map((color, i) => (
           <Chip color={color} key={i}>
             {color}
           </Chip>
         ))}
       </List>
-      <List className="flex flex-wrap gap-2 items-center w-full">
+      <List
+        className="flex flex-wrap gap-2 items-center w-full"
+        component="div"
+      >
         {COLORS.map((color, i) => (
           <Chip color={color} key={i} onClose={() => {}}>
             {color}
           </Chip>
         ))}
       </List>
-    </ul>
+    </div>
   );
 }
