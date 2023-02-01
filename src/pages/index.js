@@ -23,7 +23,7 @@ export default function App() {
             <Input
               className="w-full"
               // hint={"this is hint example"}
-              id="Email"
+              id="Input1"
               label="Email"
               placeholder="your@mail.com"
               type="email"
@@ -31,14 +31,14 @@ export default function App() {
             <Input
               className="w-full"
               disabled
-              id="Email"
+              id="Input2"
               label="Email"
               placeholder="your@mail.com"
               type="email"
             />
             <Input
               className="w-full"
-              id="Email"
+              id="Input3"
               label="Email"
               optional
               placeholder="your@mail.com"
@@ -49,7 +49,7 @@ export default function App() {
             <Input
               className="w-full"
               hint={"Input hint"}
-              id="Email"
+              id="Input4"
               label="Email"
               placeholder="your@mail.com"
               type="email"
@@ -57,7 +57,7 @@ export default function App() {
             <Input
               className="w-full"
               error="Input error"
-              id="Email"
+              id="Input5"
               label="Email"
               placeholder="your@mail.com"
               type="email"
@@ -67,7 +67,7 @@ export default function App() {
             <Input
               className="w-full"
               icon={<Icon name="Mail" />}
-              id="Email"
+              id="Input6"
               label="Email"
               placeholder="your@mail.com"
               type="email"
@@ -76,7 +76,7 @@ export default function App() {
               className="w-full"
               icon={<Icon name="Mail" />}
               iconPosition="right"
-              id="Email"
+              id="Input7"
               label="Email"
               placeholder="your@mail.com"
               type="email"
@@ -84,19 +84,22 @@ export default function App() {
           </List>
           <List className="w-full flex flex-col" component="div">
             <Input
+              addOn="https://"
               className="w-full"
-              id="Email"
-              label="Email"
-              placeholder="your@mail.com"
-              type="email"
+              id="Input8"
+              label="Link"
+              placeholder="example.com"
+              type="text"
             />
             <Input
+              addOn=".com"
+              addOnPosition="right"
               className="w-full"
               iconPosition="right"
-              id="Email"
-              label="Email"
-              placeholder="your@mail.com"
-              type="email"
+              id="Input9"
+              label="Link"
+              placeholder="yourlink"
+              type="text"
             />
           </List>
         </div>
