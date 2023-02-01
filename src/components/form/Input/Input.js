@@ -14,7 +14,7 @@ export default function Input(props) {
       label={label}
       optional={optional}
     >
-      <InputBase id={id} label={label} {...inputProps} />
+      <InputBase id={id} label={label} {...inputProps} error={!!error} />
     </FormControl>
   );
 }

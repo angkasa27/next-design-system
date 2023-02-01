@@ -8,7 +8,7 @@ import Acordion from "@elements/Acordion";
 import Badge from "@elements/Badge";
 import List from "@elements/List";
 import Chip from "@elements/Chip";
-import Icon from "@assets/Icon/Icon";
+import Icon from "@assets/Icon";
 import Input from "@form/Input";
 
 const COLORS = ["blue", "gray", "green", "red", "purple", "yellow"];
@@ -18,16 +18,88 @@ export default function App() {
     <div className="">
       <Navbar />
       <div className="container flex gap-2 flex-col mt-2">
-        <List className="w-full" component="div">
-          <Input
-            className="w-full"
-            // hint={"this is hint example"}
-            id="inputForm"
-            label="Email"
-            placeholder="test"
-            type="email"
-          />
-        </List>
+        <div>
+          <List className="w-full flex flex-col" component="div">
+            <Input
+              className="w-full"
+              // hint={"this is hint example"}
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+            <Input
+              className="w-full"
+              disabled
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+            <Input
+              className="w-full"
+              id="Email"
+              label="Email"
+              optional
+              placeholder="your@mail.com"
+              type="email"
+            />
+          </List>
+          <List className="w-full flex flex-col gap-2" component="div">
+            <Input
+              className="w-full"
+              hint={"Input hint"}
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+            <Input
+              className="w-full"
+              error="Input error"
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+          </List>
+          <List className="w-full flex flex-col" component="div">
+            <Input
+              className="w-full"
+              icon={<Icon name="Mail" />}
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+            <Input
+              className="w-full"
+              icon={<Icon name="Mail" />}
+              iconPosition="right"
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+          </List>
+          <List className="w-full flex flex-col" component="div">
+            <Input
+              className="w-full"
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+            <Input
+              className="w-full"
+              iconPosition="right"
+              id="Email"
+              label="Email"
+              placeholder="your@mail.com"
+              type="email"
+            />
+          </List>
+        </div>
         <AcordionSection />
         <AlertSection />
         <BadgeSection />

@@ -29,7 +29,7 @@ export default function FormControl(props) {
         >
           {label}
           {optional && (
-            <span className="ml-2 text-default-secondary">
+            <span className="ml-2 text-default-secondary font-normal">
               {typeof optional === "string" ? optional : `(Opsional)`}
             </span>
           )}
