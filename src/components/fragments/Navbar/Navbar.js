@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "@assets/Icon/Icon";
+import Icon from "@assets/Icon";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 

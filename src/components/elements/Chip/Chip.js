@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from "@elements/Button";
 import { CHIP_CLASS } from "./constant";
-import Icon from "@assets/Icon/Icon";
+import Icon from "@assets/Icon";
 
 export default function Chip({ children, onClose, className, color }) {
   return (

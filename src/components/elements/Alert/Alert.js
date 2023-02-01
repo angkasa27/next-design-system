@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ALERT_CLASS } from "./constant";
 import Button from "@elements/Button";
-import Icon from "@assets/Icon/Icon";
+import Icon from "@assets/Icon";
 export default function Alert(props) {
   const { children, className, color, dismissible, icon, title, action, id } =
     props;

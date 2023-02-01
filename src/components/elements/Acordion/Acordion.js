@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Button from "@elements/Button";
-import Icon from "@assets/Icon/Icon";
+import Icon from "@assets/Icon";
 
 export default function Acordion(props) {
   const { className, items, id, bordered, alwaysOpen, color } = props;
